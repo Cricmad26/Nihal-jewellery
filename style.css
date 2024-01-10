@@ -237,7 +237,7 @@ color: black;
 }
 
 /* mobile version */
-@media screen and (min-width:473px) {
+@media screen and (min-width:475px) {
     .sidebar{
         display: none;
     }
