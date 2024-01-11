@@ -57,9 +57,9 @@ color: black;
 .menu-toggle{
     display: none;
 }
-.min-logo img{
+/* .min-logo img{
     display: none;
-}
+} */
 .search{
     /* margin-left:90px; */
     width: 60%;
