@@ -61,7 +61,7 @@ color: black;
     display: none;
 }
 .search{
-    margin-left: 20px;
+    /* margin-left:90px; */
     width: 60%;
     height: 40px;
     display: flex;
@@ -79,8 +79,8 @@ color: black;
     background: #b3a1a1;
     color: black;
     border: none;
-    border-radius: 20px;
-    width: 120px;
+    border-radius: 10px;
+    width: 50px;
     cursor: pointer;
 }
 .profile{
@@ -88,13 +88,13 @@ color: black;
     align-items: center;
     gap: 0.5rem;
 }
-.location,.person{
+.location{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
     font-size: 20px;
-    color: black;
+    color: rgb(199, 76, 76);
     text-decoration: none;
     padding: 0 10px;
     height: 40px;
@@ -193,9 +193,9 @@ color: black;
     object-position: center;
     filter: brightness(0.8);
 }
-.detail-name a{
+.detail-name  a{
     text-decoration: none;
-    margin-left: 42px;
+    padding-top: 3.5px;
     color: black;
 }
 .detail-name p{
@@ -211,33 +211,21 @@ color: black;
 .detail-card:hover .weddings img{
     filter: opacity(1);
 }
-#last{
-    margin-left: 33px;
-    font-size: 45px;
-    font-weight: lighter;
-}
-.ftimg img{
-    margin-left: 150px;
-    height:420px;
-    width:420px;
-    border-radius: 50%;
-}
-.ftc{
+.footer{
     display: flex;
-    margin-left: 23px;
 }
-.para{
-    width: 50%;
-    height: auto;
-    margin-left: 20px;
+.footer-img{
+    margin-top: 15px;
+    width: 250px;
+    height: 50px;
+    margin-left: 15px;
 }
-#copy{
-    margin-top: 50px;
-   text-align: center;
+.footer p{
+    margin: 15px 0 0 125px;
 }
 
 /* mobile version */
-@media screen and (min-width:275px) {
+@media screen and (max-width:640px) {
     .sidebar{
         display: none;
     }
@@ -253,7 +241,7 @@ color: black;
         font-size: 20px;
         color: black;
         text-decoration: none;
-        padding: 0 10px;
+        /* padding: 0 10px; */
         height: 40px;
         border-radius: 50%;
         z-index: 3;
@@ -263,6 +251,7 @@ color: black;
         z-index: 10;
     }
     .min-logo img{
+        margin-left:-75px;
         display: block;
         width:55px;
         height:40px;
