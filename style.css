@@ -57,9 +57,9 @@ color: black;
 .menu-toggle{
     display: none;
 }
-/* .min-logo img{
+ .min-logo img{
     display: none;
-} */
+} 
 .search{
     /* margin-left:90px; */
     width: 60%;
@@ -232,20 +232,20 @@ color: black;
     .main{
         margin-left: 0px;
     }
-    .menu-toggle{
+    /* .menu-toggle{ 
         margin-top: 9px;
         display: block;
         justify-content: center;
         align-items: center;
         /* background-color: #ffffff; */
-        font-size: 20px;
+        /* font-size: 20px;
         color: black;
         text-decoration: none;
         /* padding: 0 10px; */
-        height: 40px;
+        /* height: 40px;
         border-radius: 50%;
         z-index: 3;
-    }
+    }  */
     .sidebar .active{
         display: flex;
         z-index: 10;
