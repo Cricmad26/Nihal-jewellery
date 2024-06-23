@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="nihal.png" type="image/png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Nihal Jewelleres & Works</title>
@@ -24,6 +25,7 @@
             <a href="#">Contact us</a>
         </div>
     </div>
+    
     <!-- <div class="whatsapp"> -->
         <!-- <a href="https://wa.me/9182858821"> -->
             
@@ -38,18 +40,73 @@
                 <span class="material-symbols-outlined" id="menu">menu</span>
             </div>
              <div class="min-logo"><img src="./logo.jpeg" alt=""></div> 
-           <!-- search bar -->
+           <!-- search bar
             <div class="search">
                 <input type="text" placeholder="Search">
                 <button class="search-btn">Search</button>
-            </div>
+            </div> -->
             <!-- profile icon on left side of navbar -->
             <div class="profile">
                 <a href="https://maps.app.goo.gl/v9to9MVNpUH8TSuo6" class="location"><span class="material-symbols-outlined">location_on</span></a>
                 <a href="https://wa.me/9182858821" class="person"><img src="./whatsapp.png" alt=""></a>
             </div>
         </div>
-        <div class="banner"><img src="./Jewellery banner.jpg" alt="invalid" class="jbanner"></div>
+        <!-- <div class="banner"><img src="./Jewellery banner.jpg" alt="invalid" class="jbanner"></div> -->
+        <div class="slider">
+            <div class="slides">
+                <div class="slide"><img src="./Jewellery banner.jpg" alt="Image 1"></div>
+                <div class="slide"><img src="./neckless.jpeg" alt="Image 3"></div>
+                <div class="slide"><img src="./V-DayBannerF.png" alt="Image 2"></div>
+                <div class="slide"><img src="./jewellery_banner.jpg" alt="Image 2"></div>
+                
+                
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+               <!-- js for image slider  -->
+                <script>
+                    let currentSlide = 0;
+const slideInterval = 3000; // Interval time in milliseconds (3 seconds)
+let autoSlide;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    if (index >= slides.length) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = slides.length - 1;
+    } else {
+        currentSlide = index;
+    }
+    const newTransformValue = -currentSlide * 100;
+    document.querySelector('.slides').style.transform = `translateX(${newTransformValue}%)`;
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+function startAutoSlide() {
+    autoSlide = setInterval(nextSlide, slideInterval);
+}
+
+function stopAutoSlide() {
+    clearInterval(autoSlide);
+}
+
+// Initial display
+showSlide(currentSlide);
+startAutoSlide();
+
+// Optional: Stop auto slide on hover and restart on mouse leave
+document.querySelector('.slider').addEventListener('mouseenter', stopAutoSlide);
+document.querySelector('.slider').addEventListener('mouseleave', startAutoSlide);
+                </script>
         <!-- main-highlight -->
         <div class="main-highlight">
         <!-- title section nd arrow -->
@@ -208,9 +265,75 @@
             </div>
         </div><br><br><br><br>
         <hr>
-        <div class="footer">
-            <div class="footer-img"><img src="./logo.jpeg" alt=""></div>
-        </div>
+        <footer>
+            <div class="container">
+              <div class="content grid">
+                <div class="item ">
+                  <h3>Navigation</h3>
+                  <div class="item_box flex1 ">
+                    <ul>
+                      <li>Home</li>
+                      <li>Servies</li>
+                      <!-- <li>News</li>
+                      <li>Team</li> -->
+                    </ul>
+                    <ul>
+                      <li>About Us</li>
+                      <li>Privacy Policy</li>
+                      <li>Contact</li>
+                      <!-- <li>Membership</li> -->
+                    </ul>
+                  </div>
+                </div>
+        
+                <div class="item">
+                  <!-- <h3>Recent News</h3>
+                  <div class="box flex">
+                    <div class="img">
+                      <img src="image/p1.jpg" alt="">
+                    </div>
+                    <div class="text">
+                      <label>SEP 16, 2021</label>
+                      <p>Lorem ipsum dolor sit amet consectetur</p>
+                    </div>
+                  </div> -->
+                  <!-- <div class="box flex">
+                    <div class="img">
+                      <img src="image/p1.jpg" alt="">
+                    </div>
+                    <div class="text">
+                      <label>SEP 16, 2021</label>
+                      <p>Lorem ipsum dolor sit amet consectetur</p>
+                    </div>
+                  </div> -->
+                  <!-- <div class="box flex">
+                    <div class="img">
+                      <img src="image/p1.jpg" alt="">
+                    </div>
+                    <div class="text">
+                      <label>SEP 16, 2021</label>
+                      <p>Lorem ipsum dolor sit amet consectetur</p>
+                    </div>
+                  </div> -->
+                </div>
+        
+                <div class="item">
+                  <!-- <h3>Subscribe Newsletter</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit minima minus odio.</p>
+                  <input type="text" placeholder="Enter Email">
+                  <label class="label">Send</label> -->
+                  <div class="icon">
+                    <h3>Follow Us</h3>
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-youtube"></i>
+                    <i class="fa fa-twitter"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="legal">&copy; 2024 NIHAL JEWELLERY WORKS </p>
+            </div>
+          </footer>
     </div>   
 </body>
 <script src="./app.js"></script>
